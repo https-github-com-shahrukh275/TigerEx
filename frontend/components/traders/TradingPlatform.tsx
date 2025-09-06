@@ -56,7 +56,6 @@ import {
   CartesianGrid,
   Tooltip as RechartsTooltip,
   ResponsiveContainer,
-  CandlestickChart,
   AreaChart,
   Area,
 } from 'recharts';
