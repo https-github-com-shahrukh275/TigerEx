@@ -267,10 +267,6 @@ const AdvancedTradingInterface: React.FC = () => {
         type: 'volume',
       },
       priceScaleId: '',
-      scaleMargins: {
-        top: 0.8,
-        bottom: 0,
-      },
     });
 
     // Sample data
