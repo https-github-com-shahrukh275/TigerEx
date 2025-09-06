@@ -90,19 +90,19 @@
 
 @layer utilities {
   .text-bull {
-    @apply text-bull;
+    color: #22c55e;
   }
 
   .text-bear {
-    @apply text-bear;
+    color: #ef4444;
   }
 
   .bg-bull {
-    @apply bg-bull;
+    background-color: #22c55e;
   }
 
   .bg-bear {
-    @apply bg-bear;
+    background-color: #ef4444;
   }
 
   .gradient-trading {
