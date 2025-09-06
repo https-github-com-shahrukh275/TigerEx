@@ -323,7 +323,7 @@ const AdvancedTradingInterface: React.FC = () => {
 
     for (let i = 0; i < 24; i++) {
       data.push({
-        time,
+        time: time as any,
         value: Math.random() * 1000000,
         color: Math.random() > 0.5 ? '#26a69a' : '#ef5350',
       });
