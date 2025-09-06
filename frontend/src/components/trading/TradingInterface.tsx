@@ -20,6 +20,7 @@ export function TradingInterface() {
   const dispatch = useDispatch();
   const { selectedPair } = useSelector((state: RootState) => state.trading);
   const [activeTab, setActiveTab] = useState('orderbook');
+  const [orderType, setOrderType] = useState<'buy' | 'sell'>('buy');
 
   return (
     <div className="h-screen flex flex-col bg-gray-900">
@@ -74,7 +75,11 @@ export function TradingInterface() {
 
         {/* Right Panel - Order Form */}
         <div className="col-span-3 card">
-          <OrderForm />
+          <OrderForm
+            pair={selectedPair}
+            orderType={orderType}
+            onOrderTypeChange={setOrderType}
+          />
         </div>
       </div>
 
