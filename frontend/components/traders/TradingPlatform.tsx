@@ -739,14 +739,14 @@ const TradingPlatform: React.FC = () => {
         autoHideDuration={6000}
         onClose={() => setNotification(null)}
       >
-        {notification && (
+        {notification ? (
           <Alert
             severity={notification.severity}
             onClose={() => setNotification(null)}
           >
             {notification.message}
           </Alert>
-        )}
+        ) : undefined}
       </Snackbar>
     </Box>
   );
