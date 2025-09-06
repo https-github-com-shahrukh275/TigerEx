@@ -165,7 +165,7 @@ export function Features() {
               Ready to Experience the Future of Trading?
             </h3>
             <p className="text-gray-300 mb-6">
-              Join millions of traders on the world's most advanced
+              Join millions of traders on the world&apos;s most advanced
               cryptocurrency exchange
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

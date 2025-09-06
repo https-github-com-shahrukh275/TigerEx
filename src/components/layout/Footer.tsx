@@ -76,7 +76,7 @@ export function Footer() {
                 <span className="text-white font-bold text-xl">TigerEx</span>
               </Link>
               <p className="text-gray-400 text-sm mb-6">
-                The world's most advanced hybrid cryptocurrency exchange
+                The world&apos;s most advanced hybrid cryptocurrency exchange
                 platform.
               </p>
 

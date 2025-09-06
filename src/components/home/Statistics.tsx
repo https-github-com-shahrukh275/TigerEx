@@ -96,7 +96,7 @@ export function Statistics() {
             Trusted by Millions
           </h2>
           <p className="text-gray-400 text-lg">
-            Join the world's most advanced cryptocurrency trading platform
+            Join the world&apos;s most advanced cryptocurrency trading platform
           </p>
         </motion.div>
 

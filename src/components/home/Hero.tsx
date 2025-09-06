@@ -58,9 +58,9 @@ export function Hero() {
             </h1>
 
             <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              World's most advanced hybrid cryptocurrency exchange combining CEX
-              and DEX functionality with unlimited blockchain support and shared
-              liquidity aggregation.
+              World&apos;s most advanced hybrid cryptocurrency exchange
+              combining CEX and DEX functionality with unlimited blockchain
+              support and shared liquidity aggregation.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
