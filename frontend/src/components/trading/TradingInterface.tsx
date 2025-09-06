@@ -57,7 +57,7 @@ export function TradingInterface() {
               </div>
             </div>
             <div className="flex-1 overflow-hidden">
-              {activeTab === 'orderbook' && <OrderBook symbol={selectedPair} />}
+              {activeTab === 'orderbook' && <OrderBook pair={selectedPair} />}
               {activeTab === 'trades' && (
                 <div className="p-4 text-gray-400">
                   Recent trades will be displayed here
@@ -69,7 +69,7 @@ export function TradingInterface() {
 
         {/* Center Panel - Chart */}
         <div className="col-span-6 card">
-          <TradingChart symbol={selectedPair} />
+          <TradingChart pair={selectedPair} />
         </div>
 
         {/* Right Panel - Order Form */}
