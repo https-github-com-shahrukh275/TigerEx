@@ -51,7 +51,7 @@ function App() {
       {/* Logo */}
       <div>
         <a href="https://mentat.ai" target="_blank">
-          <img src={mentatLogo} alt="Mentat Logo" />
+          <img src={mentatLogo.src || mentatLogo} alt="Mentat Logo" />
         </a>
       </div>
 
