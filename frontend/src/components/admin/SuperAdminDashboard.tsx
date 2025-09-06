@@ -797,6 +797,15 @@ export function SuperAdminDashboard() {
 }
 
 // Helper Components
+interface StatsCardProps {
+  title: string;
+  value: string;
+  change: string;
+  changeType: 'positive' | 'negative' | 'neutral';
+  icon: React.ComponentType<{ className?: string }>;
+  color: 'blue' | 'yellow' | 'green' | 'purple' | 'red';
+}
+
 function StatsCard({
   title,
   value,
@@ -804,7 +813,7 @@ function StatsCard({
   changeType,
   icon: Icon,
   color,
-}: any) {
+}: StatsCardProps) {
   const colorClasses = {
     blue: 'bg-blue-500',
     yellow: 'bg-yellow-500',
