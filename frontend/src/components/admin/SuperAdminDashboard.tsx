@@ -1040,7 +1040,7 @@ interface AITaskCardProps {
   status: 'running' | 'completed' | 'pending' | 'failed';
   progress: number;
   lastRun: string;
-  recommendations: string[];
+  recommendations: number;
 }
 
 function AITaskCard({
