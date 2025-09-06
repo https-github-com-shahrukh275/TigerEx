@@ -1095,13 +1095,21 @@ function AITaskCard({
   );
 }
 
+interface AIRecommendationProps {
+  type: 'performance' | 'security' | 'optimization' | 'maintenance';
+  title: string;
+  description: string;
+  priority: 'low' | 'medium' | 'high' | 'critical';
+  estimatedImpact: string;
+}
+
 function AIRecommendation({
   type,
   title,
   description,
   priority,
   estimatedImpact,
-}: any) {
+}: AIRecommendationProps) {
   const priorityColors = {
     low: 'bg-green-500',
     medium: 'bg-yellow-500',
