@@ -19,6 +19,7 @@ interface DropdownMenuItemProps {
   children: React.ReactNode;
   onClick?: () => void;
   className?: string;
+  asChild?: boolean;
 }
 
 interface DropdownMenuSeparatorProps {
@@ -122,6 +123,7 @@ export const DropdownMenuItem: React.FC<DropdownMenuItemProps> = ({
   children,
   onClick,
   className = '',
+  asChild = false,
 }) => {
   const { setIsOpen } = React.useContext(DropdownMenuContext);
 
@@ -131,6 +133,18 @@ export const DropdownMenuItem: React.FC<DropdownMenuItemProps> = ({
     }
     setIsOpen(false);
   };
+
+  if (asChild && React.isValidElement(children)) {
+    return React.cloneElement(children, {
+      onClick: (e: React.MouseEvent) => {
+        handleClick();
+        if (children.props.onClick) {
+          children.props.onClick(e);
+        }
+      },
+      className: `block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 ${children.props.className || ''} ${className}`,
+    });
+  }
 
   return (
     <button
