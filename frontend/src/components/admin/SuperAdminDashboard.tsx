@@ -235,7 +235,7 @@ export function SuperAdminDashboard() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <StatsCard
           title="Total Admin Users"
-          value={systemStats?.total_admin_users || 0}
+          value={(systemStats?.total_admin_users || 0).toString()}
           change="+2"
           changeType="positive"
           icon={Users}
@@ -243,7 +243,7 @@ export function SuperAdminDashboard() {
         />
         <StatsCard
           title="Pending KYC"
-          value={systemStats?.pending_kyc_applications || 0}
+          value={(systemStats?.pending_kyc_applications || 0).toString()}
           change="+15"
           changeType="neutral"
           icon={UserCheck}
@@ -251,7 +251,7 @@ export function SuperAdminDashboard() {
         />
         <StatsCard
           title="Token Listings"
-          value={systemStats?.pending_token_listings || 0}
+          value={(systemStats?.pending_token_listings || 0).toString()}
           change="+3"
           changeType="positive"
           icon={Coins}
@@ -259,7 +259,7 @@ export function SuperAdminDashboard() {
         />
         <StatsCard
           title="White Label Exchanges"
-          value={systemStats?.active_white_label_exchanges || 0}
+          value={(systemStats?.active_white_label_exchanges || 0).toString()}
           change="+1"
           changeType="positive"
           icon={Building}
