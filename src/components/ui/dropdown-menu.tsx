@@ -12,6 +12,7 @@ interface DropdownMenuTriggerProps {
 interface DropdownMenuContentProps {
   children: React.ReactNode;
   className?: string;
+  align?: 'start' | 'center' | 'end';
 }
 
 interface DropdownMenuItemProps {
@@ -75,6 +76,7 @@ export const DropdownMenuTrigger: React.FC<DropdownMenuTriggerProps> = ({
 export const DropdownMenuContent: React.FC<DropdownMenuContentProps> = ({
   children,
   className = '',
+  align = 'end',
 }) => {
   const { isOpen, setIsOpen } = React.useContext(DropdownMenuContext);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -100,10 +102,16 @@ export const DropdownMenuContent: React.FC<DropdownMenuContentProps> = ({
 
   if (!isOpen) return null;
 
+  const alignClasses = {
+    start: 'left-0 origin-top-left',
+    center: 'left-1/2 transform -translate-x-1/2 origin-top',
+    end: 'right-0 origin-top-right',
+  };
+
   return (
     <div
       ref={contentRef}
-      className={`absolute right-0 mt-2 w-56 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50 ${className}`}
+      className={`absolute ${alignClasses[align]} mt-2 w-56 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50 ${className}`}
     >
       <div className="py-1">{children}</div>
     </div>
