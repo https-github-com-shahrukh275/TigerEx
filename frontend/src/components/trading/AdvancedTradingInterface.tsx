@@ -303,7 +303,7 @@ const AdvancedTradingInterface: React.FC = () => {
       const close = low + Math.random() * (high - low);
 
       data.push({
-        time,
+        time: time as any,
         open,
         high,
         low,
