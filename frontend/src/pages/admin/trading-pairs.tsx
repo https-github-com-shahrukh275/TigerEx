@@ -387,7 +387,7 @@ const TradingPairsAdminPage: React.FC = () => {
               <Switch
                 id="is_spot_enabled"
                 checked={createForm.is_spot_enabled ?? true}
-                onCheckedChange={(checked) =>
+                onCheckedChange={(checked: boolean) =>
                   setCreateForm((prev) => ({
                     ...prev,
                     is_spot_enabled: checked,
@@ -400,7 +400,7 @@ const TradingPairsAdminPage: React.FC = () => {
               <Switch
                 id="is_margin_enabled"
                 checked={createForm.is_margin_enabled ?? false}
-                onCheckedChange={(checked) =>
+                onCheckedChange={(checked: boolean) =>
                   setCreateForm((prev) => ({
                     ...prev,
                     is_margin_enabled: checked,
