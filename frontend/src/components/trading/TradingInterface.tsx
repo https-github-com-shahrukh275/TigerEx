@@ -9,12 +9,12 @@ import {
   setOrderType,
   setOrderSide,
 } from '@/store/slices/tradingSlice';
-import { OrderBook } from './OrderBook';
-import { TradingChart } from './TradingChart';
-import { OrderForm } from './OrderForm';
-import { PositionsPanel } from './PositionsPanel';
-import { MarketSelector } from './MarketSelector';
-import { TradingHeader } from './TradingHeader';
+import OrderBook from './OrderBook';
+import TradingChart from './TradingChart';
+import OrderForm from './OrderForm';
+import PositionsPanel from './PositionsPanel';
+import MarketSelector from './MarketSelector';
+import TradingHeader from './TradingHeader';
 
 export function TradingInterface() {
   const dispatch = useDispatch();
