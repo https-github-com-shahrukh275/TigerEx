@@ -1035,13 +1035,21 @@ function BlockchainCard({
   );
 }
 
+interface AITaskCardProps {
+  title: string;
+  status: 'running' | 'completed' | 'pending' | 'failed';
+  progress: number;
+  lastRun: string;
+  recommendations: string[];
+}
+
 function AITaskCard({
   title,
   status,
   progress,
   lastRun,
   recommendations,
-}: any) {
+}: AITaskCardProps) {
   const statusColors = {
     running: 'bg-blue-500',
     completed: 'bg-green-500',
