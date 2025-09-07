@@ -181,7 +181,7 @@ const TradePage = () => {
 
               {/* Positions and Orders */}
               <div className="bg-gray-800 rounded-lg">
-                <PositionsPanel activeTab={activeTab} />
+                <PositionsPanel />
               </div>
             </div>
 
