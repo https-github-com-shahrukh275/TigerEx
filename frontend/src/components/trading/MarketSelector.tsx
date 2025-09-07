@@ -13,13 +13,13 @@ interface Market {
 }
 
 interface MarketSelectorProps {
-  selectedPair: string;
-  onPairSelect: (pair: string) => void;
+  selectedPair?: string;
+  onPairSelect?: (pair: string) => void;
 }
 
 export function MarketSelector({
-  selectedPair,
-  onPairSelect,
+  selectedPair = 'BTCUSDT',
+  onPairSelect = () => {},
 }: MarketSelectorProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
