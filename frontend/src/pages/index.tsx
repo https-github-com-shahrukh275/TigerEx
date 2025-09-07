@@ -8,7 +8,7 @@ import {
   CurrencyDollarIcon,
   ChartBarIcon,
   UserGroupIcon,
-  LightningBoltIcon,
+  BoltIcon,
   CogIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
@@ -251,7 +251,7 @@ const HomePage = () => {
                 </div>
                 <div className="flex items-center space-x-8 text-sm text-gray-400">
                   <div className="flex items-center space-x-2">
-                    <LightningBoltIcon className="w-5 h-5 text-yellow-400" />
+                    <BoltIcon className="w-5 h-5 text-yellow-400" />
                     <span>0.1% Trading Fees</span>
                   </div>
                   <div className="flex items-center space-x-2">
