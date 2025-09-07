@@ -13,6 +13,24 @@ const TradePage = () => {
   const [orderType, setOrderType] = useState<'buy' | 'sell'>('buy');
   const [activeTab, setActiveTab] = useState('spot');
 
+  // Convert between symbol formats
+  const convertToMarketFormat = (pair: string) => {
+    return pair.replace('/', '');
+  };
+
+  const convertFromMarketFormat = (symbol: string) => {
+    // Convert BTCUSDT to BTC/USDT
+    if (symbol.endsWith('USDT')) {
+      const base = symbol.replace('USDT', '');
+      return `${base}/USDT`;
+    }
+    return symbol;
+  };
+
+  const handlePairSelect = (symbol: string) => {
+    setSelectedPair(convertFromMarketFormat(symbol));
+  };
+
   const tradingTabs = [
     { id: 'spot', name: 'Spot', description: 'Buy and sell crypto instantly' },
     {
@@ -97,8 +115,8 @@ const TradePage = () => {
             {/* Left Sidebar - Market Selector */}
             <div className="col-span-2">
               <MarketSelector
-                selectedPair={selectedPair}
-                onPairSelect={setSelectedPair}
+                selectedPair={convertToMarketFormat(selectedPair)}
+                onPairSelect={handlePairSelect}
               />
             </div>
 

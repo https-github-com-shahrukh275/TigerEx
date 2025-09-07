@@ -12,7 +12,15 @@ interface Market {
   volume24h: number;
 }
 
-export function MarketSelector() {
+interface MarketSelectorProps {
+  selectedPair: string;
+  onPairSelect: (pair: string) => void;
+}
+
+export function MarketSelector({
+  selectedPair,
+  onPairSelect,
+}: MarketSelectorProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [favorites, setFavorites] = useState<Set<string>>(
@@ -117,7 +125,12 @@ export function MarketSelector() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3, delay: index * 0.05 }}
-              className="flex items-center justify-between p-3 hover:bg-gray-700/50 rounded-lg cursor-pointer transition-colors group"
+              className={`flex items-center justify-between p-3 hover:bg-gray-700/50 rounded-lg cursor-pointer transition-colors group ${
+                selectedPair === market.symbol
+                  ? 'bg-orange-500/20 border-l-2 border-orange-500'
+                  : ''
+              }`}
+              onClick={() => onPairSelect(market.symbol)}
             >
               <div className="flex items-center space-x-3">
                 <button
