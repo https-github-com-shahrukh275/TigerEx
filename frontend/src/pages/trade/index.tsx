@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 import TradingChart from '../../components/trading/TradingChart';
 import OrderBook from '../../components/trading/OrderBook';
 import OrderForm from '../../components/trading/OrderForm';
-import PositionsPanel from '../../components/trading/PositionsPanel';
-import MarketSelector from '../../components/trading/MarketSelector';
+import { PositionsPanel } from '../../components/trading/PositionsPanel';
+import { MarketSelector } from '../../components/trading/MarketSelector';
 import TradingHeader from '../../components/trading/TradingHeader';
 
 const TradePage = () => {
