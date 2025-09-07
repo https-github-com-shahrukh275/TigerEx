@@ -51,7 +51,9 @@ const TradePage = () => {
     },
   };
 
-  const currentMarket = marketData[selectedPair] || marketData['BTC/USDT'];
+  const currentMarket =
+    marketData[selectedPair as keyof typeof marketData] ||
+    marketData['BTC/USDT'];
 
   return (
     <>
